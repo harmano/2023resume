@@ -12,11 +12,16 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link href="css/main.css" rel="stylesheet">
+    <style>
+      .header__menu-item-cst{
+        margin-bottom: 25px;
+      }
+    </style>
   </head>
   <body>
     <main class="main">
       <header class="header">
-        <div class="header__wrapper">
+        <div class="header__wrapper mobileshadow">
           <div class="header__left-inner">
             <div class="header__logo-wrapper">
               <div class="header__logo">Har<i>m<span>a</span>n</i></div>
@@ -25,7 +30,7 @@
           <div class="header__right-inner">
             <ul class="header__social">
               <!--<li class="header__social-item"><a class="header__social-link" href="#">Behance</a></li>-->
-              <li class="header__social-item"><a class="header__social-link" href="https://www.instagram.com/thesofound/">Instagram</a></li>
+              <!--<li class="header__social-item"><a class="header__social-link" href="https://www.instagram.com/thesofound/">Instagram</a></li>-->
               <li class="header__social-item"><a class="header__social-link" href="portfolio.html">Portfolio</a></li>
             
             </ul>
@@ -35,16 +40,17 @@
               <ul class="header__menu-social">
                 <!--<li class="header__social-item"><a class="header__social-link" href="#">Behance</a></li>-->
                 <li class="header__social-item"><a class="header__social-link" href="https://www.instagram.com/thesofound/">Instagram</a></li>
-                <li class="header__social-item"><a class="header__social-link" href="portfolio.html">Portfolio</a></li>
+                <li class="header__social-item"><a class="header__social-link" href="/portfolio.html">Portfolio</a></li>
 
               </ul>
               <div class="header__menu-content">
                 <ul class="header__menu-list" id="myMenu"> 
-                  <li class="header__menu-item" data-menuanchor="home"><a class="header__menu-link" href="#home">Home</a></li>
-                  <li class="header__menu-item" ><a class="header__menu-link" href="portfolio.html">Portfolio</a></li>
-                  <li class="header__menu-item" ><a class="header__menu-link" href="about.html">About</a></li>
-                  <li class="header__menu-item" ><a class="header__menu-link" href="services.html">Services</a></li>
-                  <li class="header__menu-item" ><a class="header__menu-link" href="contact.html">Contacts </a></li>
+                  <li class="header__menu-item-cst"  data-menuanchor="home"><a class="header__menu-link" href="#home">Home</a></li>
+    
+                  <li class="header__menu-item-cst" ><a class="header__menu-link" href="/portfolio.html">Portfolio</a></li>
+                  <li class="header__menu-item-cst" ><a class="header__menu-link" href="/about.html">About</a></li>
+                  <li class="header__menu-item-cst" ><a class="header__menu-link" href="/services.html">Services</a></li>
+                  <li class="header__menu-item-cst" ><a class="header__menu-link" href="/contact.html">Contacts </a></li>
                 </ul>
                 <ul class="header__menu-contacts">
                   <li class="header__menu-contact"><a class="header__menu-link" href="tel:647-514-9885">+1 647 514 9885</a></li>
@@ -80,7 +86,7 @@
       </div>
       <div id="pagepiling">
         <!-- Main section-->
-        <div class="section section-home pp-scrollable">
+        <div class="section section-home pp-scrollable section-mb" >
           <canvas class="noise"></canvas>
           <div class="section-main home js-section" id="home">
             <div class="container-main home__container">
@@ -89,7 +95,7 @@
                   <div class="home__title">Hi, I’m Harman Brar </div>
                   <div class="home__desc">a visual creator who codes and designs.</div>
                 </div>
-                <!-- Portfolio page link--><a class="home__link" href="#"><img class="home__link-img" src="img/home/link-y.svg" alt="img"></a>
+                <!-- Portfolio page link--><a class="home__link" href="/portfolio.html"><img class="home__link-img" src="img/home/link-y.svg" alt="img"></a>
               </div>
             </div>
           </div>

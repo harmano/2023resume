@@ -20,6 +20,9 @@
   1. Global
 -------------------------------------------------------------------------------*/
 /* 1.1 General */
+
+html, body {width: auto!important; overflow-x: hidden!important} 
+
 .container {
   max-width: calc(100% - 200px);
   margin: auto;
@@ -2430,7 +2433,7 @@ input[type="checkbox"]:checked + label:after {
   background-color: rgba(255, 255, 255, 0);
   border-right: 1px solid #f3f3f35d;
   border-left: 0px;
-  padding: 40px;
+  padding: 10px;
   text-align: center;
   transition-duration: .2s;
 }
@@ -2444,6 +2447,11 @@ input[type="checkbox"]:checked + label:after {
   color: #F3F3F3;
   font-weight: 900;
 
+}
+@media (max-width: 750px) {
+  .services-text{
+    font-size: 20px;
+  }
 }
 .grid-item.w3-red{
   border-right: 0ox !important;

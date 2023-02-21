@@ -157,6 +157,14 @@ body {
   .container-main {
     overflow: visible;
   }
+
+  .mobileshadow{
+    background-color: #000;
+
+  }
+  .section-mb{
+    margin-top: 50px;
+  }
 }
 
 .container-fluid {
@@ -175,6 +183,9 @@ body {
     width: 95%;
     max-width: 1530px;
   }
+  .section-home {
+    background-position: 50% 100% !important;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -182,12 +193,18 @@ body {
     width: 738px;
     max-width: 100%;
   }
+  .section-home {
+    background-position: 40% 100% !important;
+  }
 }
 
 @media (max-width: 767px) {
   .container {
     width: 100%;
     padding: 0 15px;
+  }
+  .section-home {
+    background-position: 50% 100% !important;
   }
 }
 
@@ -2262,7 +2279,7 @@ body {
 
 @media (max-width: 1000px) {
   .cases__card-img {
-    opacity: 1;
+    opacity: .3;
   }
 }
 .bg-image img{
@@ -3010,3 +3027,4 @@ background: linear-gradient(4deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 10
   font-style: italic;
   font-weight: 700;
 }
+
