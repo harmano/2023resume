@@ -16,7 +16,7 @@
 
   </head>
   <body>
-    <header class="header header-js" style="z-index: 999 !important;">
+    <header class="header header-js" style="z-index: 999 !important;" >
       <div class="header__wrapper header-wrapper-js">
         <div class="header__left-inner">
           <div class="header__logo-wrapper">
@@ -53,7 +53,7 @@
       </div>
 
     </header>
-    <main class="main" >
+    <main class="main"  id="top">
       <div style="" class="mg-t-header"></div>
       <div class="container-fluid " >
         <div class="info-inner">
@@ -73,15 +73,18 @@
       </div>
       <!-- Main image of the case page-->
       <div class="case-bg">
-       
+        
+      <button onclick="topFunction()" id="myBtncst" title="Go to top" class="arrow-bt">
+        <img src="portfolio-img/1287381-200.png" />
+      </button>
         <div class="">
           <div class="">
             <div class="" >
-              <div class="container-fluid">
+              <div class="container-fluid" >
                 <div class="next__inner">
-                  <div class="row-img" > 
-                    <div class="column-img" id="sticky1">
-                      <ul class="" id="myBtnContainer" > 
+                  <div class="row-img"  > 
+                    <div class="column-img displaynm"  id="sticky1">
+                      <ul class="sticky" id="myBtnContainer" > 
                         <li class="portfolio-sidenav"><a class="btn active" onclick="filterSelection('all')">All</a></li>
                         <li class="portfolio-sidenav"><a class="btn " onclick="filterSelection('branding')">Branding</a></li>
                         <li class="portfolio-sidenav"><a class="btn " onclick="filterSelection('code')">Code</a></li>
@@ -97,9 +100,26 @@
                         <li class="portfolio-sidenav-2"><a  class="btn " onclick="filterSelection('logo')">Logo</a></li>
 
                         <li class="portfolio-sidenav-2"><a  class="btn " onclick="filterSelection('print')">Print</a></li>
-                        <li class="portfolio-sidenav-2"><a  class="btn " onclick="filterSelection('film')">Film</a></li>
 
                       </ul>
+                    </div>
+                    <div class="column-img-movbile displaynmalt mobilenavportfolio  container-fluid" >
+                      <ul  class="sticky2" id="myBtnContainerMobile">
+                        <li class=""><a class="btn active" onclick="filterSelection('all')">All</a></li>
+                        <li class=""><a class="btn " onclick="filterSelection('branding')">Branding</a></li>
+                        <li class=""><a class="btn " onclick="filterSelection('code')">Code</a></li>
+                        <li class=""><a class="btn " onclick="filterSelection('design')">Design</a></li>
+                        <br>
+                        <li class="" style="text-decoration: none;">Specific:</li>
+                        <li class=""><a class="btn " onclick="filterSelection('web')">Web</a></li>
+                        <li class=""><a class="btn " onclick="filterSelection('uiux')">UI/UX</a></li>
+                        <li class=""><a  class="btn " onclick="filterSelection('artwork')">Artwork</a></li>
+                        <li class=""><a  class="btn " onclick="filterSelection('poster')">Poster</a></li>
+                        <li class=""><a  class="btn " onclick="filterSelection('ad')">Ad</a></li>
+                        <li class=""><a  class="btn " onclick="filterSelection('logo')">Logo</a></li>
+
+                        <li class=""><a  class="btn " onclick="filterSelection('print')">Print</a></li>
+                         </ul>
                     </div>
                     <div class="column-img">
                       <!---Project 
@@ -149,6 +169,14 @@
                           <p class="portfolio-t">The House of Wrap</p>
                           <p class="portfolio-p">
                             Web Design & Development</p>
+                        </div>
+                      </a>
+                      <!---Image-->
+                      <a class="column   uiux design">
+                        <div class="portfolio-card">
+                          <img class=" portfolio-img portfolio-img-single" src="portfolio-img/iPhone-Mockup.jpg" style="width:100%">
+                          <p class="portfolio-t">App Design</p>
+                          <p class="portfolio-p">UIUX</p>
                         </div>
                       </a>
                        <!---Image-->
@@ -234,7 +262,7 @@
                         
                       
                    
-                     
+                    
                       
                     
                       <!---Project-->
@@ -245,6 +273,15 @@
                           <p class="portfolio-t">Actually Milk</p>
                           <p class="portfolio-p">
                             Branding and Design.</p>
+                        </div>
+                      </a>
+                          <!---Image-->
+                      <a class="column  poster design">
+                        <div class="portfolio-card">
+                          <img class=" portfolio-img portfolio-img-single" src="portfolio-img/flyerhardscrapper.jpg" style="width:100%">
+                          <p class="portfolio-t">Expo Hardscaper</p>
+                            <p class="portfolio-p">
+                              Graphic Design.</p>
                         </div>
                       </a>
                        <!---Project-->
@@ -827,6 +864,37 @@
           this.className += " active";
         });
       }
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainerMobile");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+
+      // Get the button
+      let mybutton = document.getElementById("myBtncst");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
       </script>
     
   </body>

@@ -3023,18 +3023,100 @@ input[type="checkbox"]:checked + label:after {
   text-shadow: 0px 0px 15px #000000;
 }
 
-
-#sticky1 {
-  position: sticky;
-  position: -webkit-sticky;
-  width: 100px;
-  height: 100%;
-  top: 150px;
-  display: flex;
-  justify-content: left;
-  color: #fff;
+.sticky {
+  position: -webkit-sticky !important;
+  position: fixed !important;
+  top: 20;
+  padding: 10px;
 }
 
+.displaynmalt{
+  display: none;
+}
+.sticky2{
+  position: -webkit-sticky !important;
+  position: fixed !important;
+  top: 20;
+  padding: 20px;
+  z-index: 2;
+  background-color: rgba(255, 0, 0, 0.58);
+  justify-content: center;
+  text-align: left;
+  width: 100px;
+  left: 0;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.32); 
+box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.32);
+color: #ffffff;
+}
 
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .displaynm{
+    display: none;
+  }
+  .displaynmalt{
+    display: block;
+  }
+  .column-img-movbile {
+    -ms-flex: 100%; /* IE10 */
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+  .portfolio-sidenav-mobile:hover{
+      text-decoration: underline !important;
+  }
+  .portfolio-sidenavmobile{
+    font-size: 20px;
+    margin-bottom: 3px;
+    font-weight: 900;
+    transition-duration: 1s;
+  }
+  #myBtncst {
+    background-color: rgba(0, 0, 0, 0.128) !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    width: 50px !important;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.32); 
+box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.32);
+  }
+}
 
+.arrow-bt{
+  position:fixed;
+  bottom:0;
+  right:0;
+  /* extra styling */
+  margin:.5em;
+  z-index: 100;
+  width: 90px;
+  
+}
 
+.arrow-bt img{
+  -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
+}
+
+#myBtncst {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  transition-duration: 1s;
+}
+
+#myBtncst:hover {
+  -webkit-filter: invert(50%); /* Safari/Chrome */
+    filter: invert(50%);
+}
